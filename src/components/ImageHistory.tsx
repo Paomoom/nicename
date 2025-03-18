@@ -100,6 +100,7 @@ const ImageHistory: React.FC = () => {
                   label: '退出登录',
                   onClick: () => {
                     logout();
+                    localStorage.removeItem('nameGeneratorState');
                     navigate('/');
                   }
                 }

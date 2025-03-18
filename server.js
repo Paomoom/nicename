@@ -15,7 +15,7 @@ const app = express();
 // 安全中间件
 app.use(helmet());
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? 'https://your-domain.com' : 'http://localhost:5173',
+  origin: '*',
   credentials: true
 }));
 

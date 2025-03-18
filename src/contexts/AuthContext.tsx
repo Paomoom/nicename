@@ -198,10 +198,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   
   // 登出
   const logout = () => {
+    // 清除用户状态和游客状态
     setCurrentUser(null);
     setIsGuest(false);
     localStorage.removeItem('currentUser');
     localStorage.removeItem('isGuest');
+    localStorage.removeItem('nameGeneratorState'); // 清除生成器状态
   };
   
   const value = {

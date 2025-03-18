@@ -867,6 +867,7 @@ const NameGenerator: React.FC = () => {
                   icon: <LogoutOutlined />,
                   label: '退出登录',
                   onClick: () => {
+                    resetAllStates();
                     logout();
                     navigate('/');
                   }
